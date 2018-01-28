@@ -1,4 +1,38 @@
 
+var mainText = document.getElementById("mainText");
+var time = document.getElementById("time");
+var title = document.getElementById("title");
+var firebaseRef = firebase.database().ref();
+
+
+firebaseRef.on("value", function(snapshot) {
+    var posts = "";
+    snapshot.forEach(function(data) {
+        var dtitle = data.val()["name"];
+        var dtime = data.val()["when"];
+        var ddes = data.val()["description"];
+        posts += '<div class="jumbotron">' + "Title: " +
+            dtitle + "<br>Time: " +  dtime + "<br>Description: " + ddes + "<br></div>"
+    });
+
+    document.getElementById("allPosts").innerHTML = "<p id=\"allPosts\">" + posts + "</p>"
+});
+
+function postEvent() {
+
+    messageText = mainText.value;
+    eventTime = time.value;
+
+    firebaseRef.push().set({
+        name: title.value,
+        when: eventTime,
+        description: messageText
+    });
+
+    window.location.replace("events.html");
+}
+
+
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // User is signed in.
@@ -49,37 +83,4 @@ function signUp() {
         var errorMessage = error.message;
         // ...
     });
-}
-
-var mainText = document.getElementById("mainText");
-var time = document.getElementById("time");
-var title = document.getElementById("title");
-var firebaseRef = firebase.database().ref();
-
-
-firebaseRef.on("value", function(snapshot) {
-    var posts = "";
-    snapshot.forEach(function(data) {
-        var dtitle = data.val()["name"];
-        var dtime = data.val()["when"];
-        var ddes = data.val()["description"];
-        posts += '<div class="jumbotron">' + "Title: " +
-            dtitle + "<br>Time: " +  dtime + "<br>Description: " + ddes + "<br></div>"
-    });
-
-    document.getElementById("allPosts").innerHTML = "<p id=\"allPosts\">" + posts + "</p>"
-});
-
-function postEvent() {
-
-    messageText = mainText.value;
-    eventTime = time.value;
-
-    firebaseRef.push().set({
-        name: title.value,
-        when: eventTime,
-        description: messageText
-    });
-
-    window.location.replace("events.html");
 }
