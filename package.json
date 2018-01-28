@@ -1,0 +1,22 @@
+{
+  "name": "hacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duoduo0921/greenNew.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duoduo0921/greenNew/issues"
+  },
+  "homepage": "https://github.com/duoduo0921/greenNew#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
