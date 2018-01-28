@@ -30,7 +30,7 @@ app.get('/post', function (req, res) {
 //     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 // });
 
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 8080;
 server.listen(port, function() {
     console.log("App is running on port " + port);
 });
