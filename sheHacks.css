@@ -1,0 +1,139 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff
+}
+
+header h1 {
+  padding: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  color: forestgreen;
+  margin: 0px;
+  font-size: 90px;
+}
+
+#menu-outer {
+	height: 84px;
+	background: url(images/bar-bg.jpg) repeat-x;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+}
+.img-responsive {
+
+    height: 150px;
+    width: 150px;
+}
+
+ul {
+   list-style-type: none;
+}
+
+.homepageSection{
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 90px;
+  padding-bottom: 20px;
+}
+
+h2, h3, h4, h6 {
+  text-align: center;
+}
+
+h3{
+  font-family: 'Sacramento', cursive;
+  font-size: 70px;
+}
+h6 {
+  size: 20px;
+}
+
+.row{
+  padding-bottom: 100px;
+}
+
+.subtitle {
+  text-align : center;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 40px;
+  font-size: 30px;
+
+}
+
+hr.style3 {
+	border-top: 1px dashed #8c8b8b;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+	  float: left;
+    padding-left: 170px;
+
+}
+
+li a {
+    font-size: 15px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}

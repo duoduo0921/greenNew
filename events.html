@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>Events</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+    <style>
+        .jumbotron{
+            background-color: lightcyan;
+            color:black;
+            font-size: 40px;
+            font-family: "Apple Braille";
+        }
+
+        .auth{
+            background-color: lightsteelblue;
+            color:black;
+            font-size: 10px;
+            font-family: "Al Bayan";
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div class="auth" id="logout">
+    <p id="user_para"></p>
+    <button class="btn btn-primary btn-lg" onclick="logout()">Logout</button>
+</div>
+
+<div class="container">
+    <div class="auth" id="signup_login">
+
+        <label>Sign Up</label>
+        <input class="form-control" type="email" placeholder="Email..." id="email"/>
+        <input class="form-control" type="password" placeholder="Password..." id="password"/>
+        <button class="btn btn-primary btn-block" onclick="signUp()">Sign Up</button>
+
+        <label>Login</label>
+        <input class="form-control" type="email" placeholder="Email..." id="email_field" />
+        <input class="form-control" type="password" placeholder="Password..." id="password_field" />
+        <button class="btn btn-primary btn-block" onclick="login()">Login</button>
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="display-3">Interesting Events!!</h1>
+        <p class="lead">Login to see or create events for the environment!</p>
+        <hr class="my-4">
+        <p>Can someone help me write sth here?</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="post.html" role="button">New Event</a>
+        </p>
+    </div>
+<br>
+<br>
+
+        <div class="container">
+                <p id="allPosts"></p>
+        </div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDjsZ1XDWV6m7qIFmg7dZaqUFAB5gTwkgU",
+        authDomain: "my-project-1517029364253.firebaseapp.com",
+        databaseURL: "https://my-project-1517029364253.firebaseio.com",
+        projectId: "my-project-1517029364253",
+        storageBucket: "my-project-1517029364253.appspot.com",
+        messagingSenderId: "951495280033"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="index.js"></script>
+
+</body>
+</html>

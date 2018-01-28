@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Event</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <style>
+        .jumbotron{
+            background-color: lightcyan;
+            color:black;
+            font-size: 40px;
+            font-family: "Apple Braille";
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="container" id="posting">
+    <div class="jumbotron">
+    <h1>Post New Event</h1>
+    <label>Event Title</label>
+    <input class="form-control" type="text" placeholder="Title" id="title"/>
+
+    <label>Event Time</label>
+    <input class="form-control" type="date" placeholder="When?" id="time"/>
+
+    <label>Event Description</label>
+    <textarea class="form-control" id="mainText" placeholder="Enter text here..."></textarea>
+    <button class="btn btn-primary btn-block" id="post" onclick="postEvent()"> Post</button>
+</div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDjsZ1XDWV6m7qIFmg7dZaqUFAB5gTwkgU",
+        authDomain: "my-project-1517029364253.firebaseapp.com",
+        databaseURL: "https://my-project-1517029364253.firebaseio.com",
+        projectId: "my-project-1517029364253",
+        storageBucket: "my-project-1517029364253.appspot.com",
+        messagingSenderId: "951495280033"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="events.js"></script>
+
+</body>
+</html>
