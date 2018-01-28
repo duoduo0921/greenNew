@@ -1,34 +1,16 @@
 var express = require('express');
 var app = express();
-var path = require('path');
-var server = require('http').Server(app);
 
-app.use(express.static(path.join(__dirname)));
-app.use("/hacks", express.static(__dirname + '/hacks'));
 
-// viewed at based directory http://localhost:8080/
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + 'index.html'));
-});
+var bodyParser = require('body-parser');
 
-// add other routes below
-app.get('/events', function (req, res) {
-    res.sendFile(path.join(__dirname + 'events.html'));
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/map', function (req, res) {
-    res.sendFile(path.join(__dirname + 'map.html'));
-});
 
-app.get('/post', function (req, res) {
-    res.sendFile(path.join(__dirname + 'post.html'));
-});
-
-// app.listen(process.env.PORT || 8080, function () {
-//     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-// });
+// configure a public directory to host static content
+app.use(express.static(__dirname));
 
 var port = process.env.PORT || 8080;
-server.listen(port, function() {
-    console.log("App is running on port " + port);
-});
+
+app.listen(port);
