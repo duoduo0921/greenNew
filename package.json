@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/duoduo0921/greenNew/issues"
   },
-  "homepage": "https://github.com/duoduo0921/greenNew#readme"
+  "homepage": "https://github.com/duoduo0921/greenNew#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
