@@ -1,4 +1,3 @@
-
 var mainText = document.getElementById("mainText");
 var time = document.getElementById("time");
 var title = document.getElementById("title");
