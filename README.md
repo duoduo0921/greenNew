@@ -1,6 +1,6 @@
 # greenNew
 
-A html, Javascript, css, and Bootstrap app using Firebase database and Google Places API
+An html, Javascript, css, and Bootstrap app using Firebase database and Google Places API
 
 Allows users registrations, posts and Google Map Places search
 
